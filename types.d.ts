@@ -34699,10 +34699,10 @@ declare class SyntaxTree {
 		start: number,
 		end: number,
 		flags: number,
-		slot0?: number,
-		slot1?: number,
-		slot2?: number,
-		slot3?: number
+		slot0?: null | number,
+		slot1?: null | number,
+		slot2?: null | number,
+		slot3?: null | number
 	): number;
 	addValue(
 		value?:
