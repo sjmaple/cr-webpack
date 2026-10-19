@@ -32951,9 +32951,7 @@ type StatsFactoryExtractHookMap = {
 		],
 		void
 	>;
-	for<O = any, D = any>(
-		key: string
-	): SyncBailHook<[O, D, StatsFactoryContext], void>;
+	for(key: string): SyncBailHook<[any, any, StatsFactoryContext], void>;
 } & HookMap<SyncBailHook<[any, any, StatsFactoryContext], void>>;
 type StatsFactoryGetItemFactoryHookMap = {
 	for<
@@ -32981,9 +32979,9 @@ type StatsFactoryGetItemFactoryHookMap = {
 		[KnownStatsFactoryItemFactories[K], StatsFactoryContext],
 		void | StatsFactory
 	>;
-	for<I = any>(
+	for(
 		key: string
-	): SyncBailHook<[I, StatsFactoryContext], void | StatsFactory>;
+	): SyncBailHook<[any, StatsFactoryContext], void | StatsFactory>;
 } & HookMap<SyncBailHook<[any, StatsFactoryContext], void | StatsFactory>>;
 type StatsFactoryGetItemNameHookMap = {
 	for<
@@ -33015,9 +33013,7 @@ type StatsFactoryGetItemNameHookMap = {
 		[KnownStatsFactoryItemNames[K], StatsFactoryContext],
 		string | void
 	>;
-	for<I = any>(
-		key: string
-	): SyncBailHook<[I, StatsFactoryContext], string | void>;
+	for(key: string): SyncBailHook<[any, StatsFactoryContext], string | void>;
 } & HookMap<SyncBailHook<[any, StatsFactoryContext], string | void>>;
 type StatsFactoryGroupResultsHookMap = {
 	for<
@@ -33050,9 +33046,9 @@ type StatsFactoryGroupResultsHookMap = {
 		[GroupConfig<KnownStatsFactoryResultItems[K], G>[], StatsFactoryContext],
 		void
 	>;
-	for<I = any, G = any>(
+	for(
 		key: string
-	): SyncBailHook<[GroupConfig<I, G>[], StatsFactoryContext], void>;
+	): SyncBailHook<[GroupConfig<any, any>[], StatsFactoryContext], void>;
 } & HookMap<SyncBailHook<[GroupConfig<any, any>[], StatsFactoryContext], void>>;
 
 /**
@@ -33101,9 +33097,9 @@ type StatsFactoryItemFilterHookMap = {
 		[KnownStatsFactoryRawItems[K], StatsFactoryContext, number, number],
 		boolean | void
 	>;
-	for<I = any>(
+	for(
 		key: string
-	): SyncBailHook<[I, StatsFactoryContext, number, number], boolean | void>;
+	): SyncBailHook<[any, StatsFactoryContext, number, number], boolean | void>;
 } & HookMap<
 	SyncBailHook<[any, StatsFactoryContext, number, number], boolean | void>
 >;
@@ -33137,9 +33133,9 @@ type StatsFactoryItemSortHookMap = {
 		[Comparator<KnownStatsFactoryRawItems[K]>[], StatsFactoryContext],
 		void
 	>;
-	for<I = any>(
+	for(
 		key: string
-	): SyncBailHook<[Comparator<I>[], StatsFactoryContext], void>;
+	): SyncBailHook<[Comparator<any>[], StatsFactoryContext], void>;
 } & HookMap<SyncBailHook<[Comparator<any>[], StatsFactoryContext], void>>;
 type StatsFactoryMergeHookMap = {
 	for<
@@ -33172,9 +33168,7 @@ type StatsFactoryMergeHookMap = {
 		[KnownStatsFactoryResultItems[K][], StatsFactoryContext],
 		void | R
 	>;
-	for<I = any, R = any>(
-		key: string
-	): SyncBailHook<[I[], StatsFactoryContext], void | R>;
+	for(key: string): SyncBailHook<[any[], StatsFactoryContext], any>;
 } & HookMap<SyncBailHook<[any[], StatsFactoryContext], any>>;
 type StatsFactoryResultFilterHookMap = {
 	for<
@@ -33206,9 +33200,9 @@ type StatsFactoryResultFilterHookMap = {
 		[KnownStatsFactoryResultItems[K], StatsFactoryContext, number, number],
 		boolean | void
 	>;
-	for<I = any>(
+	for(
 		key: string
-	): SyncBailHook<[I, StatsFactoryContext, number, number], boolean | void>;
+	): SyncBailHook<[any, StatsFactoryContext, number, number], boolean | void>;
 } & HookMap<
 	SyncBailHook<[any, StatsFactoryContext, number, number], boolean | void>
 >;
@@ -33258,7 +33252,7 @@ type StatsFactoryResultHookMap = {
 		[KnownStatsFactoryResults[K], StatsFactoryContext],
 		KnownStatsFactoryResults[K]
 	>;
-	for<R = any>(key: string): SyncBailHook<[R, StatsFactoryContext], R>;
+	for(key: string): SyncBailHook<[any, StatsFactoryContext], any>;
 } & HookMap<SyncBailHook<[any, StatsFactoryContext], any>>;
 type StatsFactoryResultSortHookMap = {
 	for<
@@ -33290,9 +33284,9 @@ type StatsFactoryResultSortHookMap = {
 		[Comparator<KnownStatsFactoryResultItems[K]>[], StatsFactoryContext],
 		void
 	>;
-	for<I = any>(
+	for(
 		key: string
-	): SyncBailHook<[Comparator<I>[], StatsFactoryContext], void>;
+	): SyncBailHook<[Comparator<any>[], StatsFactoryContext], void>;
 } & HookMap<SyncBailHook<[Comparator<any>[], StatsFactoryContext], void>>;
 type StatsJsonValue =
 	| undefined
@@ -33896,9 +33890,7 @@ type StatsPrinterGetItemNameHookMap = {
 		[KnownStatsPrintItemNames[K], StatsPrinterContext],
 		string | void
 	>;
-	for<I = any>(
-		key: string
-	): SyncBailHook<[I, StatsPrinterContext], string | void>;
+	for(key: string): SyncBailHook<[any, StatsPrinterContext], string | void>;
 } & HookMap<SyncBailHook<[any, StatsPrinterContext], string | void>>;
 type StatsPrinterPrintHookMap = {
 	for<
@@ -33922,9 +33914,9 @@ type StatsPrinterPrintHookMap = {
 		[KnownStatsPrintObjects[K], StatsPrinterContext],
 		undefined | string | void
 	>;
-	for<T = any>(
+	for(
 		key: string
-	): SyncBailHook<[T, StatsPrinterContext], undefined | string | void>;
+	): SyncBailHook<[any, StatsPrinterContext], undefined | string | void>;
 } & HookMap<
 	SyncBailHook<[any, StatsPrinterContext], undefined | string | void>
 >;
@@ -33961,9 +33953,7 @@ type StatsPrinterSortItemsHookMap = {
 		[KnownStatsPrintItems[K][], StatsPrinterContext],
 		boolean | void
 	>;
-	for<I = any>(
-		key: string
-	): SyncBailHook<[I[], StatsPrinterContext], boolean | void>;
+	for(key: string): SyncBailHook<[any[], StatsPrinterContext], boolean | void>;
 } & HookMap<SyncBailHook<[any[], StatsPrinterContext], boolean | void>>;
 type StatsProfile = KnownStatsProfile & Record<string, StatsJsonValue>;
 type StatsValue =
